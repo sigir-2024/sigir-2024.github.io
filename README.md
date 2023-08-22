@@ -1,5 +1,6 @@
-The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval
-July XX-XX, 2024 | Washington D.C., USA
+**The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval**
+
+**July XX-XX, 2024 | Washington D.C., USA**
 
 SIGIR is the premier international forum for the presentation of new research results and for the demonstration of new systems and techniques in information retrieval.
 

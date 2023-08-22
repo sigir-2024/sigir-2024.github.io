@@ -12,4 +12,4 @@ The conference consists of five days of full papers, short papers, demonstration
 
 # News
 
-- This website has been created! (_Aug 22, 2023_)
+- (_Aug 22, 2023_) This website has been created! 

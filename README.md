@@ -1,1 +1,1 @@
-# sigir2024.github.io
+# sigir-2024.github.io

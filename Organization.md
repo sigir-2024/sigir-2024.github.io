@@ -1,4 +1,4 @@
-Organization
+# Organization
 
 ## General Chairs
 - Grace Hui Yang, _Georgetown University_

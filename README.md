@@ -1,4 +1,4 @@
-**The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval**
+# The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval
 
 **July XX-XX, 2024**
 

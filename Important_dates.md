@@ -1,4 +1,4 @@
-**Important Dates:**
+## Important Dates
 
 - Full paper abstract: January 18, 2024
 - Full paper submission: Jan 25, 2024

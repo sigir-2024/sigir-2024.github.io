@@ -2,4 +2,5 @@ theme: minima
 
 header_pages:
   - Organization.md
-  - info.md
+  - Important_dates.md
+  - Call_for_Sponsorship.md

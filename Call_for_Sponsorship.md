@@ -1,3 +1,5 @@
+# Call for Sponshorship
+
 On behalf of the Organizing Committee for the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2024), we invite you to participate in the conference as a supporter or exhibitor.
 
 The International ACM SIGIR Conference on Research and Development in Information Retrieval, annually attracts a thousand or more participants from industry and academia, with a common interest in search, recommendation, data mining, natural language processing, and related machine learning technologies. As a top-tier international conference affiliated with the main computer science professional organization, the Association of Computing Machinery (ACM), SIGIR is the gathering place for current and future leaders and innovators from all over the world to discuss and present the state of the art in connecting people with information. The conference location rotates among North America, Asia, Australia, and Europe.

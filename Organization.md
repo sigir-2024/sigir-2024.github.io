@@ -31,7 +31,7 @@
 - Xiao Qin, _Amazon_
 
 ## Web Chair
-Agoritsa Polyzou, _Florida International University_
+- Agoritsa Polyzou, _Florida International University_
 
 ## Special Topic Panel Chair
 - Yue Wang, _UNC_

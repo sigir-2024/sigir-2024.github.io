@@ -1,6 +1,6 @@
 # The 47th International ACM SIGIR Conference on Research and Development in Information Retrieval
 
-**July XX-XX, 2024**
+**July 14-18, 2024**
 
 **Washington D.C., USA**
 

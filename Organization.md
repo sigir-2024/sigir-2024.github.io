@@ -15,6 +15,7 @@
 ## Sponsorship Chairs
 - Fuli Feng, _USTC_
 - Udo Kruschwitz, _University of Regensburg_
+- Jimi Shanahan
 
 ## Local Arrangement Chairs
 - Jami Montgomery, _Georgetown University_

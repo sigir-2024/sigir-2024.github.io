@@ -39,7 +39,11 @@
     overflow: hidden;
     clear: both;
     margin-bottom: 1rem;
-    border-bottom: 1px dotted #e1e2e3
+    border-bottom: 1px dotted #e1e2e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #organizers ul li {}

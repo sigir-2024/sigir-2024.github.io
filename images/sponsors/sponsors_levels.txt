@@ -1,0 +1,13 @@
+
+Gold:
+- Apple
+
+Silver:
+- Baidu
+- Bloomberg
+
+academic supporters
+- NSF
+- Georgetown University
+- Georgetown Data Science Program (DSAN)
+- Washington Post

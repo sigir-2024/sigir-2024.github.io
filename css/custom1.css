@@ -75,6 +75,26 @@
     border-radius: 50% !important;
 }
 
+#organizers ul li.sponsor-card {
+    list-style: none;
+    width: 33%;
+    float: left;
+    height:auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #666; margin-bottom: 2%;
+}
+
+#organizers ul li.sponsor-card img {
+    width: 44%;
+    /*display: block;*/
+    margin: 0 auto 5px;
+    padding: 2px;
+    /*border-radius: 50% !important;*/
+}
+
 
 blockquote.hero {
     border-left: solid 2px #e1e2e3;
@@ -148,6 +168,15 @@ blockquote.hero {
     }
 
     #organizers ul li.person-card a img {
+        width: 80%;
+    }
+
+    #organizers ul li.sponsor-card {
+        width: 50%;
+        height: 200px;
+    }
+
+    #organizers ul li.sponsor-card a img {
         width: 80%;
     }
 

@@ -19,6 +19,36 @@
 	<link rel="stylesheet" href="css/shortcode_timeline2.css">
 	<link rel="stylesheet" href="css/blue.css">
 
+	<style>
+		.pro-table {
+			width: 70%;
+			border-collapse: collapse;
+			table-layout: fixed; /* Set table layout to fixed */
+		}
+
+		.pro-table th, td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+		}
+
+		.pro-table th {
+			background-color: #f2f2f2;
+		}
+
+		/* Set width for the first column and let the remaining columns share the remaining space */
+		.pro-table th:first-child,
+		td:first-child {
+			width: 10%; /* Adjust the width as needed */
+		}
+
+		/* Let the remaining columns share the remaining space equally */
+		.pro-table th:not(:first-child),
+		td:not(:first-child) {
+			width: calc((100% - 10%) / 3); /* Assuming you have 4 columns total */
+		}
+
+	</style>
 	<!--	</head>-->
 
 
@@ -110,7 +140,7 @@
 			</div>
 			<!--=== End Header ===-->
 			<!-- Image Gradient -->
-			<div class="interactive-slider-v2" style="background-image:url('images/SIGIR_2.png')">
+			<div class="interactive-slider-v2" style="background-image:url('images/SIGIR_5.png')">
 				<div class="container">
 					<h1 class="animated fadeInUp">Program-At-A-Glance</h1>
 				</div>

@@ -205,6 +205,29 @@ blockquote.hero {
     /* Add any additional styles as needed */
   }
 
+.day {
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+/*.toggle-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-image: url('images/BannerRgt.png');
+    background-size: contain;
+    transition: transform 0.3s ease;
+}*/
+.day-content {
+    /*display: none;*/
+    margin-left: 20px;
+}
+/*.expanded .toggle-icon {
+    transform: rotate(45deg);
+}*/
+
 @media(max-width: 999px) {
 
     /* for mobile */
@@ -280,6 +303,33 @@ blockquote.hero {
     }
 }
 
+.pro-table {
+    width: 70%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Set table layout to fixed */
+}
+
+.pro-table th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.pro-table th {
+    background-color: #f2f2f2;
+}
+
+/* Set width for the first column and let the remaining columns share the remaining space */
+th:first-child,
+td:first-child {
+    width: 10%; /* Adjust the width as needed */
+}
+
+/* Let the remaining columns share the remaining space equally */
+th:not(:first-child),
+td:not(:first-child) {
+    width: calc((100% - 10%) / 3); /* Assuming you have 4 columns total */
+}
 
 .accepted-papers-caption strong {
     margin: 30px 0 15px

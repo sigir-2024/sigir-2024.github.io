@@ -410,3 +410,15 @@ blockquote.hero {
         width: 100%; /* Set table width to 100% for smaller screens */
     }
 }
+
+
+.speaker-img {
+    /*width: 30%;*/
+    width: 150px; 
+    height: auto;
+    margin-bottom: 5px;
+    padding: 2px;
+    border: 3px solid #f1f2f3;
+    border-radius: 50% !important;
+    text-align: left;
+}

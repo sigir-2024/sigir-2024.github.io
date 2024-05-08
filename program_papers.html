@@ -157,13 +157,13 @@
 											<li><a href="#dc">Doctoral Consortium Papers</a></li>
 											<li><a href="#de">Demonstration Papers</a></li>
 											<li><a href="#fp">Full Papers</a></li>
-											<li><a href="#kn">Keynote Talks</a></li>
+											<!--<li><a href="#kn">Keynote Talks</a></li>-->
 											<li><a href="#pp">Perspectives Papers</a></li>
 											<li><a href="#rr">Resource & Reproducibility Papers</a></li>
 											<li><a href="#sp">Short Papers</a></li>
 											<li><a href="#si">SIRIP 2024 (Industry Track)</a></li>
-											<li><a href="#tt">Tutorials</a></li>
-											<li><a href="#wk">Workshops</a></li>
+											<!--<li><a href="#tt">Tutorials</a></li>-->
+											<!--<li><a href="#wk">Workshops</a></li>-->
 										</ul>
 										<br>
 									</div>
@@ -236,13 +236,14 @@
 					"dc": "Doctoral Consortium Papers",
 					"de": "Demonstration Papers",
 					"fp": "Full Papers",
-					"kn": "Keynote Talks",
 					"pp": "Perspectives Papers",
 					"rr": "Resource & Reproducibility Papers",
 					"sp": "Short Papers",
 					"si": "SIRIP 2024 (Industry Track)",
-					"tt": "Tutorials",
-					"wk": "Workshops",
+					// do not include these in the list of papers
+					//"tt": "Tutorials",
+					//"wk": "Workshops",
+					//"kn": "Keynote Talks",
 				};
 				fetch(filePath)
 				.then(response => response.text())
@@ -252,20 +253,22 @@
 					lines.forEach(line => {
 						var entry = JSON.parse(line.trim());
 						var prefix = entry.submssion_id.substring(0, 2); // Extract first two letters of submission_id
-						if (prefix !== currentPrefix) {
-							// If prefix changes, create a new heading
-							var heading = document.createElement("h2");
-							heading.textContent = groupNames[prefix];
-							heading.id = prefix; // Set the ID to the prefix
-							document.getElementById("submissionList").appendChild(heading);
-							currentPrefix = prefix; // Update current prefix
+						if (prefix in groupNames) { //
+							if (prefix !== currentPrefix) {
+								// If prefix changes, create a new heading
+								var heading = document.createElement("h2");
+								heading.textContent = groupNames[prefix];
+								heading.id = prefix; // Set the ID to the prefix
+								document.getElementById("submissionList").appendChild(heading);
+								currentPrefix = prefix; // Update current prefix
+							}
+							var listItem = document.createElement("li");
+							var title = entry.title;
+							var authors = entry.authors.map(author => author.name).join(", ");
+							var listItemContent = "<b>Title:</b> " + title + "<br>Author(s): <em>" + authors + "</em><br><br>";
+							listItem.innerHTML = listItemContent;
+							document.getElementById("submissionList").appendChild(listItem);
 						}
-						var listItem = document.createElement("li");
-						var title = entry.title;
-						var authors = entry.authors.map(author => author.name).join(", ");
-						var listItemContent = "<b>Title:</b> " + title + "<br>Author(s): <em>" + authors + "</em><br><br>";
-						listItem.innerHTML = listItemContent;
-						document.getElementById("submissionList").appendChild(listItem);
 					});
 				})
 				.catch(error => console.error('Error:', error));

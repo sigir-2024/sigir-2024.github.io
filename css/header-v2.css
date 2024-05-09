@@ -470,7 +470,7 @@ topbar including in mobile version*/
 
 	.header-v2 .navbar-default .navbar-nav > li > a {
 		line-height: 25px;
-		padding: 9px 22px 13px 20px;
+		padding: 9px 22px 13px 0px;
 	}
 
 	.header-v2 .navbar-default .navbar-nav > li > a,
@@ -913,7 +913,7 @@ topbar including in mobile version*/
 	.header-fixed .header-v2.header-fixed-shrink .navbar-nav > li > a {
 		color: #777;
 		margin-top: 25px;
-		padding: 21px 22px 17px 20px;
+		padding: 21px 22px 17px 0px;
 		border-bottom: solid 1px transparent !important;
 		-webkit-transition: color 0.2s ease-in-out;
 		-moz-transition: color 0.2s ease-in-out;

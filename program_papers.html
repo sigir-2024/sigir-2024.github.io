@@ -268,7 +268,7 @@
 							}
 							var listItem = document.createElement("li");
 							var title = entry.title;
-							var authors = entry.authors.map(author => author.name).join(", ");
+							var authors = entry.authors.map(author => author.name + " (" + author.affiliation + ")").join(", ");
 							var listItemContent = "<b>Title:</b> " + title + "<br>Author(s): <em>" + authors + "</em><br><br>";
 							listItem.innerHTML = listItemContent;
 							document.getElementById("submissionList").appendChild(listItem);
@@ -279,7 +279,7 @@
 			}
 
 			// Load the first JSONL file
-			loadJSONL('infofiles/sigir2024-papers.updated.v2.jsonl');
+			loadJSONL('infofiles/sigir2024-papers.updated.v3.jsonl');
 		</script>
 
 		<!--papers not grouped in tracks-->

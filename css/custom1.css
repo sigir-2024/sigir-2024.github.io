@@ -432,6 +432,14 @@ blockquote.hero {
     text-align: left;
 }
 
+.btn-icon {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            font-size: 16px;
+}
+
 .pro-table th {
     background-color: #f2f2f2;
 }

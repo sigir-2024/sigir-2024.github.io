@@ -603,6 +603,7 @@
 							</div> <!--end of day 6-->
 							<br>
 
+							<p>Note: The papers starting with <i class="fa fa-comment-o" aria-hidden="true"></i> will be presented online, without a proxy present.</p>
 							<div id="schedule"></div>
 
 						</div>
@@ -706,7 +707,11 @@
                         const list = document.createElement('ul');
                         details.papers.forEach(paper => {
                             const listItem = document.createElement('li');
-                            listItem.textContent = `${paper.Title} - Authors: ${paper.Authors}`;
+                            if (paper.Title.charAt(0) === '*') {
+                             	listItem.innerHTML = `<i class="fa fa-comment-o" aria-hidden="true"></i> ${paper.Title.substring(1)} - Authors: ${paper.Authors}`;
+                            } else {
+                            	listItem.innerHTML = `${paper.Title} - Authors: ${paper.Authors}`;
+                            }
                             list.appendChild(listItem);
                         });
                         sessionDiv.appendChild(list);

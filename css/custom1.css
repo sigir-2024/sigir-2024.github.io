@@ -450,9 +450,9 @@ blockquote.hero {
 }
 
 /* Let the remaining columns share the remaining space equally */
-.pro-table th:not(:first-child), .pro-table td:not(:first-child) {
+/*.pro-table th:not(:first-child), .pro-table td:not(:first-child) {
     width: calc((100% - 20%) / 3); /* Assuming you have 4 columns total */
-}
+/*}*/
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 600px) {

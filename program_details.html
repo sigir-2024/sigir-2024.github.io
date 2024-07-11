@@ -766,6 +766,53 @@
 		</script>
 		<script>
         document.addEventListener('DOMContentLoaded', function() {
+            var sessionChairs = {
+					"M1.1": 'Carsten Eickhoff',
+					'M1.2': 'Shuo Zhang',
+					'M1.3': 'Nicola Tonellotto',
+					'M1.4': 'Gengchen Mai',
+					'M1.5': 'Nicola Ferro',
+					'M1.6': 'Lizi Liao',
+					'M1.7': 'Michael Ekstrand',
+
+					'M2.1': 'Zhaochun Ren',
+					'M2.2': 'Gabriella Pasi',
+					'M2.3': 'Julián Urbano',
+					'M2.4': 'Doug Oard',
+					'M2.5': 'Jaap Kamps',
+					'M2.6': 'Yubin Kim',
+
+					'M3.1': 'Arjen P. de Vries',
+					'M3.2': 'Evangelos Kanoulas',
+					'M3.3': 'Jialie Shen',
+					'M3.4': 'Jimmy Huang',
+					'M3.5': 'Yongfeng Zhang',
+					'M3.6': 'Noriko Kando',
+
+					'T1.1': 'Suzan Verberne',
+					'T1.2': 'Allan Hanbury',
+					'T1.3': 'Ruihong Qiu',
+					'T1.4': 'Brian Davison',
+
+					'T2.1': 'Shane Culpepper',
+					'T2.2': 'Hamed Zamani',
+					'T2.3': 'Michael Bendersky',
+					'T2.4': 'Omar Alonso',
+					'T2.5': 'Joemon Jose',
+
+					'T3.1': 'Yi Fang',
+					'T3.2': 'Craig Macdonald',
+					'T3.3': 'Joel Mackenzie',
+					'T3.4': 'Tao Yang',
+
+					'W1.1': 'Benjamin Piwowarski',
+					'W1.2': 'Eugene Agichtein',
+					'W1.3': 'Mark Sanderson',
+					'W1.4': 'Giovanni Trappolini',
+					'W1.5': 'Paul Bennett',
+					'W1.6': 'Guglielmo Faggioli',
+					'W1.7': 'Ellen Voorhees',
+			};
             fetch('infofiles/FinalProgram.json')
                 .then(response => response.json())
                 .then(data => {
@@ -792,6 +839,10 @@
                         sessionHeading.id = details.sessionID;  // Setting the ID from sessionID
                         sessionDiv.appendChild(sessionHeading);
 
+                        const chairLine = document.createElement('p');
+                        chairLine.innerHTML = `<strong>Session chair</strong>: ${sessionChairs[details.sessionID]}`;
+                        sessionDiv.appendChild(chairLine);
+
                         const list = document.createElement('ul');
                         details.papers.forEach(paper => {
                             const listItem = document.createElement('li');
@@ -803,6 +854,8 @@
                             list.appendChild(listItem);
                         });
                         sessionDiv.appendChild(list);
+                        const spaceLine = document.createElement('br');
+                        sessionDiv.appendChild(spaceLine);
                         scheduleElement.appendChild(sessionDiv);
                     }
                 })

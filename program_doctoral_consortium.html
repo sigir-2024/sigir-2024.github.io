@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<title>SIGIR 2024</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
@@ -20,7 +20,23 @@
 	<link rel="stylesheet" href="css/blue.css">
 
 <!--	</head>-->
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /*border: none;*/
+}
 
+table, th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+</style>
 
 
 	<body class="header-fixed">
@@ -66,7 +82,7 @@
                             <a href="" class="dropdown-toggle" data-toggle="dropdown">Program</a>
                             <ul class="dropdown-menu">
                                 <li><a href="program.html">Program-At-a-Glance</a></li>
-								<li><a href="program_details.html">Detailed Program</a></li>
+                                <li><a href="program_details.html">Detailed Program</a></li>
 								<li><a href="proceedings.html">Proceedings</a></li>
 								<li><a href="program_papers.html">Accepted Papers</a></li>
                                 <li><a href="keynotes.html">Keynote Speeches (Live Streamed)</a></li>
@@ -89,12 +105,14 @@
                                 <li><a href="attend_visitingGT.html">Visiting Washington DC</a></li>
 								<li><a href="attend_info4authors.html">Information for Authors</a></li>
 								<li><a href="attend_studAwards.html">Travel Awards</a></li>
+                                <li><a href="attend_events.html">Social Events</a></li>
                             </ul>
                         </li>
                         <li class=""><a href="organizers.html">Organizers</a></li>
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Sponsors</a>
                             <ul class="dropdown-menu">
+								<li><a href="sponsorlist.html">Sponsors</a></li>
                                 <li><a href="call_for_sponsors.html">Call for Sponsorship</a></li>
                             </ul>
                         </li>
@@ -136,10 +154,11 @@
 	<!--=== End Header ===-->
 	     <!-- Image Gradient -->
 	     
-	     <div class="interactive-slider-v2" style="background-image:url('images/hotel-1.jpeg')">
+	     <div class="interactive-slider-v2" style="background-image:url('images/SIGIR_5.png')">
 	     	<div class="container">
 	     
-	     		<h1 class="animated fadeInUp">Registration</h1>
+                <h1 class="animated fadeInUp">Doctoral Consortium @ SIGIR 2024</h1>
+	     		<h2 class="animated fadeInUp" style="color: white;">July 14, 2024 - Washington DC, USA</h2>
 	     
 	     	</div>
 	     </div>
@@ -154,20 +173,106 @@
 	                    <!-- Contents goes here -->
 	                    <div class="news-v3-in">
 	
-	                        <h2 class="margin-bottom-5" style="margin-bottom: 0">
-	                            <strong>Conference Registration</strong>
-	                        </h2>
-							<p>
-								The conference will be in-person. For venue information, visit this <a href="attend.html">page</a>. For author registration information, please visit this <a href="attend_info4authors.html">page</a>. 
-							</p>
-                            <p>We look forward to meeting you in D.C.!</p>
-							<p><strong><a href="https://web.cvent.com/event/9ec6e9f1-660b-41fa-b25d-6a33c4ccda2d/summary">Registration site</a></strong></p>
-							<p><strong><a href=images/registration_rates_new.png>Information about registration fees</a></strong> (updated)</p>
+	                        <!--<h2 class="margin-bottom-5" style="margin-bottom: 0">
+	                            <strong>Call For Full Papers</strong>
+	                        </h2> -->
+
+                            <h3 class="margin-bottom-5"><strong>Time & Location</strong></h3>
+
+                            <p><strong>Date:</strong> Tuesday, July 14, 2024<br>
+                            <strong>Room:</strong> Federal A</p>
+
+                            <h2 class="margin-bottom-5"><strong>Program</strong></h2>
+                            </p>
+                            <table>
+                                <tr>
+                                    <th style="width:15%">Time</th>
+                                    <th style="width:20%">Session</th>
+                                    <th style="width:65%">Paper</th>
+                                </tr>
+                                <tr>
+                                    <td>09:00 AM - 10:30 AM</td>
+                                    <td>Session 1</td>
+                                    <td>
+                                        <ul>
+                                            <li>Axiomatic Guidance for Efficient and Controlled Neural Search<br>
+                                                Andrew Parry (University of Glasgow)<br>
+                                                <em>Mentors: Harrie Oosterhuis, Yi Fang</em><br></li>
+                                            <li>A Predictive Framework for Query Reformulation<br>
+                                                Reyhaneh Goli (The University of Melbourne)<br>
+                                                <em>Mentors: Jimmy Huang, Yi Fang</em><br></li>
+                                            <li>Query Performance Prediction for Conversational Search and Beyond<br>
+                                                Chuan Meng (University of Amsterdam)<br>
+                                                <em>Mentors: Jimmy Huang, Nick Craswell</em><br></li>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>10:30 AM - 11:00 AM</td>
+                                    <td>Coffee Break</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 AM - 12:30 PM</td>
+                                    <td>Session 2</td>
+                                    <td>
+                                        <ul>
+                                            <li>Towards a Framework for Legal Case Retrieval<br>
+                                                Tebo Leburu-Dingalo (University of Botswana)<br>
+                                                <em>Mentors: Gabriella Pasi, Jiaxin Mao</em><br></li>
+                                            <li>GOLF: Goal-Oriented Long-term liFe tasks supported by human-AI collaboration<br>
+                                                Ben Wang (University of Oklahoma)<br>
+                                                <em>Mentors: Jaap Kamps, Harrie Oosterhuis</em><br></li>
+                                            <li>Mosaicing Prevention in Declassification<br>
+                                                Nathaniel Rollings (University of Maryland, College Park)<br>
+                                                <em>Mentors: Jaap Kamps, Ian Soboroff</em><br></li>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 PM - 13:30 PM </td>
+                                    <td>Lunch Break</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>13:30 PM - 3:00 PM </td>
+                                    <td>Session 3</td>
+                                    <td>
+                                        <ul>
+                                            <li>Machine Generated Explanations and Their Evaluation<br>
+                                                Edward Richards (University of Glasgow)<br>
+                                                <em>Mentors: Ian Soboroff, Jiaxin Mao</em><br></li>
+                                            <li>Leveraging LLMs for Detecting and Modeling the Propagation of Misinformation in Social Networks
+                                                Payel Santra (Indian Association for the Cultivation of Science, Kolkata)<br>
+                                                <em>Mentors: Gabriella Pasi, Yang Deng</em><br></li>
+                                            <li>Personalized Large Language Models through Parameter Efficient Fine-Tuning Techniques<br>
+                                                Marco Braga (University of Milano-Bicocca)<br>
+                                                <em>Mentors: Nick Craswell, Yang Deng</em><br></li>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </table>
+                            
+                            <hr>
 
 							<p>
-								Early registration deadline: May 15, 2024. <br>
-								Standard registration deadline: June 15, 2024.
+								<h3 class="margin-bottom-5"><strong>Doctor Consortium Chairs</strong></h3>
+                                <img src="images/organizers/Hui_Fang.png" class="speaker-img">
+                                Hui Fang, University of Delaware, USA<br>
+                                <img src="images/organizers/Lizi_Liao.png" class="speaker-img">
+                                Lizi Liao, Singapore Management University, Singapore<br>
 							</p>
+							<p>
+								<h3 class="margin-bottom-5"><strong>Contact</strong></h3>
+								Questions or suggestions related to Doctoral Consortium can be communicated to the Chairs at <a href="mailto:SIGIR24-doccon@acm.org"> SIGIR24-doccon@acm.org</a>
+							</p>
+							
+
+
 						</div>
 	                </div>
 	            </div>

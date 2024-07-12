@@ -698,6 +698,16 @@
 							</div> <!--end of day 6-->
 							<br>
 
+							<p style="margin-bottom: 0;"><strong>Paper types and their presentation and Q&A time:</strong></p>
+							<ul>
+								<li>[fp] full paper (15 + 3 minutes)</li>
+								<li>[pp] perspectives paper (15 + 3 minutes)</li>
+								<li>[rr] reproducibility paper (15 + 3 minutes)</li>
+								<li>[**rr] resource paper (5 minutes, no Q&A)</li>
+								<li>[tois] TOIS paper (15 + 3 minutes)</li>
+							</ul>
+							<br>
+
 							<div id="schedule"></div>
 
 							<p>Note: The papers starting with <i class="fa fa-comment-o" aria-hidden="true"></i> will be presented online, without a proxy present.</p>
@@ -802,7 +812,7 @@
 					'T1.3': 'Ruihong Qiu',
 					'T1.4': 'Brian Davison',
 
-					'T2.1': 'Shane Culpepper',
+					'T2.1': 'Johanne Trippas',
 					'T2.2': 'Hamed Zamani',
 					'T2.3': 'Michael Bendersky',
 					'T2.4': 'Omar Alonso',
@@ -821,54 +831,72 @@
 					'W1.6': 'Guglielmo Faggioli',
 					'W1.7': 'Ellen Voorhees',
 			};
-            fetch('infofiles/FinalProgram.json')
-                .then(response => response.json())
-                .then(data => {
-                    const scheduleElement = document.getElementById('schedule');
+			// Fetch B.jsonl file and process it to create dictionaryB
+			fetch('infofiles/session paper type-Jul11.jsonl')
+				.then(response => response.text())
+				.then(text => {
+					const lines = text.split('\n').filter(line => line.trim().length > 0);
+					const dictionaryB = {};
 
-                    // Group data by session using a dictionary-like structure
-                    const sessions = data.reduce((acc, item) => {
-                        const sessionKey = item.Session;  // This assumes 'Session' is your primary key for grouping
-                        if (!acc[sessionKey]) {
-                            acc[sessionKey] = {
-                                papers: [],
-                                sessionID: item.SessionID  // Assumes each item has a 'sessionID' field
-                            };
-                        }
-                        acc[sessionKey].papers.push(item);
-                        return acc;
-                    }, {});
+					lines.forEach(line => {
+						const obj = JSON.parse(line);
+						dictionaryB[obj['Paper ID']] = {
+							title: obj['Title'],
+							type: obj['Type']
+						};
+					});
 
-                    // Generate HTML for each session
-                    for (const [sessionKey, details] of Object.entries(sessions)) {
-                        const sessionDiv = document.createElement('div');
-                        const sessionHeading = document.createElement('h2');
-                        sessionHeading.textContent = sessionKey;
-                        sessionHeading.id = details.sessionID;  // Setting the ID from sessionID
-                        sessionDiv.appendChild(sessionHeading);
+					fetch('infofiles/FinalProgram.json')
+					.then(response => response.json())
+					.then(data => {
+						const scheduleElement = document.getElementById('schedule');
 
-                        const chairLine = document.createElement('p');
-                        chairLine.innerHTML = `<strong>Session chair</strong>: ${sessionChairs[details.sessionID]}`;
-                        sessionDiv.appendChild(chairLine);
+						// Group data by session using a dictionary-like structure
+						const sessions = data.reduce((acc, item) => {
+							const sessionKey = item.Session;  // This assumes 'Session' is your primary key for grouping
+							if (!acc[sessionKey]) {
+								acc[sessionKey] = {
+									papers: [],
+									sessionID: item.SessionID  // Assumes each item has a 'sessionID' field
+								};
+							}
+							acc[sessionKey].papers.push(item);
+							return acc;
+						}, {});
 
-                        const list = document.createElement('ul');
-                        details.papers.forEach(paper => {
-                            const listItem = document.createElement('li');
-                            if (paper.Title.charAt(0) === '*') {
-                             	listItem.innerHTML = `<i class="fa fa-comment-o" aria-hidden="true"></i> ${paper.Title.substring(1)} - Authors: ${paper.Authors}`;
-                            } else {
-                            	listItem.innerHTML = `${paper.Title} - Authors: ${paper.Authors}`;
-                            }
-                            list.appendChild(listItem);
-                        });
-                        sessionDiv.appendChild(list);
-                        const spaceLine = document.createElement('br');
-                        sessionDiv.appendChild(spaceLine);
-                        scheduleElement.appendChild(sessionDiv);
-                    }
-                })
-                .catch(error => console.error('Error loading the schedule:', error));
-			});
+						// Generate HTML for each session
+						for (const [sessionKey, details] of Object.entries(sessions)) {
+							const sessionDiv = document.createElement('div');
+							const sessionHeading = document.createElement('h2');
+							sessionHeading.textContent = sessionKey;
+							sessionHeading.id = details.sessionID;  // Setting the ID from sessionID
+							sessionDiv.appendChild(sessionHeading);
+
+							const chairLine = document.createElement('p');
+							chairLine.innerHTML = `<strong>Session chair</strong>: ${sessionChairs[details.sessionID]}`;
+							sessionDiv.appendChild(chairLine);
+
+							const list = document.createElement('ul');
+							details.papers.forEach(paper => {
+								const listItem = document.createElement('li');
+								const updatedInfo = dictionaryB[paper['Paper ID']]
+								if (paper.Title.charAt(0) === '*') {
+									listItem.innerHTML = `<i class="fa fa-comment-o" aria-hidden="true"></i> [${updatedInfo.type}] ${updatedInfo.title} - Authors: ${paper.Authors}`;
+								} else {
+									listItem.innerHTML = `[${updatedInfo.type}] ${updatedInfo.title} - Authors: ${paper.Authors}`;
+								}
+								list.appendChild(listItem);
+							});
+							sessionDiv.appendChild(list);
+							const spaceLine = document.createElement('br');
+							sessionDiv.appendChild(spaceLine);
+							scheduleElement.appendChild(sessionDiv);
+						}
+					})
+					.catch(error => console.error('Error loading the schedule:', error));
+				})
+				.catch(error => console.error('Error loading B.jsonl:', error));
+				})
 		</script>
 	    <script>
 			function downloadInvite(summary, dtstart, dtend, description, location) {

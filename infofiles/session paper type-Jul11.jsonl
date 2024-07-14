@@ -13,7 +13,7 @@
 {"PaperID": "**rr7317", "Type": "**rr", "Paper ID": 7317, "Type.1": "resource", "SessionID": "SIGIR M1.2 Reasoning & Knowledge Graphs", "Title": "YAGO 4.5: A Large and Clean Knowledge Base with a Rich Taxonomy"}
 {"PaperID": "rr0849", "Type": "rr", "Paper ID": 849, "Type.1": "reproducibility", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Ranked List Truncation for Large Language Model-based Re-Ranking"}
 {"PaperID": "fp5855", "Type": "fp", "Paper ID": 5855, "Type.1": "full paper", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Efficient Inverted Indexes for Approximate Retrieval over Learned Sparse Representations"}
-{"PaperID": "fp2522", "Type": "fp", "Paper ID": 2522, "Type.1": "full paper", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Improving Fast Neural Ranking"}
+{"PaperID": "fp2522", "Type": "fp", "Paper ID": 2522, "Type.1": "full paper", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "GUITAR: Gradient Pruning toward Fast Neural Ranking"}
 {"PaperID": "fp5634", "Type": "fp", "Paper ID": 5634, "Type.1": "full paper", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Neural Passage Quality Estimation for Static Pruning"}
 {"PaperID": "rr3002", "Type": "rr", "Paper ID": 3002, "Type.1": "reproducibility", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Revisiting Document Expansion and Filtering for Effective First-Stage Retrieval"}
 {"PaperID": "tois10.1145/3576922", "Type": "tois", "Paper ID": "TOIS-2022-0104.R1", "Type.1": "tois", "SessionID": "SIGIR M1.3 Efficiency for Search", "Title": "Efficient Document-at-a-time and Score-at-a-time Query Evaluation for Learned Sparse Representations"}
@@ -25,12 +25,12 @@
 {"PaperID": "fp9594", "Type": "fp", "Paper ID": 9594, "Type.1": "full paper", "SessionID": "SIGIR M1.4 Multimedia 1", "Title": "Fine-grained Textual Inversion Network for Zero-Shot Composed Image Retrieval"}
 {"PaperID": "fp1104", "Type": "fp", "Paper ID": 1104, "Type.1": "full paper", "SessionID": "SIGIR M1.5 Evaluation", "Title": "The Treatment of Ties in Rank-Biased Overlap"}
 {"PaperID": "fp9393", "Type": "fp", "Paper ID": 9393, "Type.1": "full paper", "SessionID": "SIGIR M1.5 Evaluation", "Title": "Uncontextualized significance considered dangerous"}
-{"PaperID": "fp9742", "Type": "fp", "Paper ID": 9742, "Type.1": "full paper", "SessionID": "SIGIR M1.5 Evaluation", "Title": "Can we trust joint evaluation measures of relevance and fairness in recommender systems?"}
+{"PaperID": "fp9742", "Type": "fp", "Paper ID": 9742, "Type.1": "full paper", "SessionID": "SIGIR M1.5 Evaluation", "Title": "Can we trust Can We Trust Recommender System Fairness Evaluation? The Role of Fairness and Relevance"}
 {"PaperID": "pp3345", "Type": "pp", "Paper ID": 3345, "Type.1": "perspective", "SessionID": "SIGIR M1.5 Evaluation", "Title": "What Matters in a Measure? A Perspective from Large-Scale Search Evaluation"}
 {"PaperID": "**rr7366", "Type": "**rr", "Paper ID": 7366, "Type.1": "resource", "SessionID": "SIGIR M1.5 Evaluation", "Title": "CIRAL: A Test Collection for CLIR Evaluations in African Languages"}
 {"PaperID": "**rr1024", "Type": "**rr", "Paper ID": 1024, "Type.1": "resource", "SessionID": "SIGIR M1.5 Evaluation", "Title": "ACORDAR 2.0: A Test Collection for Ad Hoc Dataset Retrieval with Densely Pooled Datasets and Question-Style Queries"}
 {"PaperID": "**rr5704", "Type": "**rr", "Paper ID": 5704, "Type.1": "resource", "SessionID": "SIGIR M1.5 Evaluation", "Title": "Browsing and Searching Metadata of TREC"}
-{"PaperID": "fp0388", "Type": "fp", "Paper ID": 388, "Type.1": "full paper", "SessionID": "SIGIR M1.6 RecSys and LLMs", "Title": "Enhancing Session Recommendations: Unveiling User Intent with Large Language Models"}
+{"PaperID": "fp0388", "Type": "fp", "Paper ID": 388, "Type.1": "full paper", "SessionID": "SIGIR M1.6 RecSys and LLMs", "Title": "Large Language Models for Intent-Driven Session Recommendations"}
 {"PaperID": "fp5531", "Type": "fp", "Paper ID": 5531, "Type.1": "full paper", "SessionID": "SIGIR M1.6 RecSys and LLMs", "Title": "Sequential Recommendation with Latent Relations based on Large Language Model"}
 {"PaperID": "fp6572", "Type": "fp", "Paper ID": 6572, "Type.1": "full paper", "SessionID": "SIGIR M1.6 RecSys and LLMs", "Title": "Enhancing Sequential Recommenders with Augmented Knowledge from Aligned Large Language Models"}
 {"PaperID": "fp8810", "Type": "fp", "Paper ID": 8810, "Type.1": "full paper", "SessionID": "SIGIR M1.6 RecSys and LLMs", "Title": "IDGenRec: LLM-RecSys Alignment with Textual ID Learning"}
@@ -62,7 +62,7 @@
 {"PaperID": "fp3310", "Type": "fp", "Paper ID": 3310, "Type.1": "full paper", "SessionID": "SIGIR M2.5 NLP", "Title": "Enhanced Packed Marker with Entity Information for Aspect Sentiment Triplet Extraction"}
 {"PaperID": "fp4769", "Type": "fp", "Paper ID": 4769, "Type.1": "full paper", "SessionID": "SIGIR M2.5 NLP", "Title": "Exogenous and Endogenous Data Augmentation for Low-Resource Complex Named Entity Recognition"}
 {"PaperID": "**rr6197", "Type": "**rr", "Paper ID": 6197, "Type.1": "resource", "SessionID": "SIGIR M2.5 NLP", "Title": "C-Pack: Packed Resources For General Chinese Embeddings"}
-{"PaperID": "**rr7288", "Type": "**rr", "Paper ID": 7288, "Type.1": "resource", "SessionID": "SIGIR M2.5 NLP", "Title": "QuantCheck: A real-world open-domain benchmark for fact-checking numerical claims"}
+{"PaperID": "**rr7288", "Type": "**rr", "Paper ID": 7288, "Type.1": "resource", "SessionID": "SIGIR M2.5 NLP", "Title": "QuanTemp: A real-world open-domain benchmark for fact-checking numerical claims"}
 {"PaperID": "**rr6139", "Type": "**rr", "Paper ID": 6139, "Type.1": "resource", "SessionID": "SIGIR M2.5 NLP", "Title": "ACE-2005-PT: Corpus for Event Extraction in Portuguese"}
 {"PaperID": "fp1139", "Type": "fp", "Paper ID": 1139, "Type.1": "full paper", "SessionID": "SIGIR M2.6 Multimodal RecSys", "Title": "Who To Align With: Feedback-Oriented Multi-Modal Alignment in Recommendation Systems"}
 {"PaperID": "fp8082", "Type": "fp", "Paper ID": 8082, "Type.1": "full paper", "SessionID": "SIGIR M2.6 Multimodal RecSys", "Title": "Multimodality Invariant Learning for Multimedia-Based New Item Recommendation"}

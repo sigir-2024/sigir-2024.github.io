@@ -171,7 +171,8 @@
 											<!--<li><a href="#tt">Tutorials</a></li>-->
 											<!--<li><a href="#wk">Workshops</a></li>-->
 										</ul>
-										<br>
+									<p><i class="fa fa-star" aria-hidden="true"></i> denotes best paper nominees</p>
+									<br>
 									</div>
 
 									<div id="submissionList"></div>
@@ -251,6 +252,9 @@
 					//"wk": "Workshops",
 					//"kn": "Keynote Talks",
 				};
+				const bestpaper_nom_ids =
+				["3856", "3563", "4411", "5367", "1628", "5855", "0410", "2522", "5654", "4465", "1061", "8068", "7462", "3345", "9816", "8879", "4266", "7366", "6427", "6907", "2755",
+				"6730", "1484", "7467", "8273", "9924", "3746", "1037", "3368", "5137", "9126", "8000", "9082"]
 				fetch(filePath)
 				.then(response => response.text())
 				.then(data => {
@@ -259,6 +263,7 @@
 					lines.forEach(line => {
 						var entry = JSON.parse(line.trim());
 						var prefix = entry.submssion_id.substring(0, 2); // Extract first two letters of submission_id
+						var paperID = entry.submssion_id.slice(-4);
 						if (prefix in groupNames) { //
 							if (prefix !== currentPrefix) {
 								// If prefix changes, create a new heading
@@ -271,7 +276,11 @@
 							var listItem = document.createElement("li");
 							var title = entry.title;
 							var authors = entry.authors.map(author => author.name + " (" + author.affiliation + ")").join(", ");
-							var listItemContent = "<b>Title:</b> " + title + "<br>Author(s): <em>" + authors + "</em><br><br>";
+							let bestPaperInd = '';
+							if (bestpaper_nom_ids.includes(paperID)){
+								bestPaperInd = '<i class="fa fa-star" aria-hidden="true"></i>';
+							}
+							var listItemContent = bestPaperInd + " <b>Title:</b> " + title + "<br>Author(s): <em>" + authors + "</em><br><br>";
 							listItem.innerHTML = listItemContent;
 							document.getElementById("submissionList").appendChild(listItem);
 						}

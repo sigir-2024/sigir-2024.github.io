@@ -794,12 +794,13 @@
 
 							<p style="margin-bottom: 0;"><strong>Paper types and their presentation and Q&A time:</strong></p>
 							<ul>
-								<li>[fp] full paper (15 + 3 minutes)</li>
-								<li>[pp] perspectives paper (15 + 3 minutes)</li>
-								<li>[rr] reproducibility paper (15 + 3 minutes)</li>
-								<li>[**rr] resource paper (5 minutes, no Q&A)</li>
-								<li>[tois] TOIS paper (15 + 3 minutes)</li>
+								<li><span style="color: blue;">[fp]</span> full paper (15 + 3 minutes)</li>
+								<li><span style="color: green;">[pp]</span> perspectives paper (15 + 3 minutes)</li>
+								<li><span style="color: orange;">[rr]</span> reproducibility paper (15 + 3 minutes)</li>
+								<li><span style="color: purple;">[**rr]</span> resource paper (5 minutes, no Q&A)</li>
+								<li><span style="color: red;">[tois]</span> TOIS paper (15 + 3 minutes)</li>
 							</ul>
+							<p><i class="fa fa-star" aria-hidden="true"></i> denotes best paper nominees</p>
 							<br>
 
 							<div id="schedule"></div>
@@ -925,6 +926,9 @@
 					'W1.6': 'Guglielmo Faggioli',
 					'W1.7': 'Ellen Voorhees',
 			};
+			const bestpaper_nom_ids =
+				["3856", "3563", "4411", "5367", "1628", "5855", "410", "2522", "5654", "4465", "1061", "8068", "7462", "3345", "9816", "8879", "4266", "7366", "6427", "6907",
+				"2755", "6730", "1484", "7467", "8273", "9924", "3746", "1037", "3368", "5137", "9126", "8000", "9082"]; //full and short best paper nominations
 			// Fetch B.jsonl file and process it to create dictionaryB
 			fetch('infofiles/session paper type-Jul11.jsonl')
 				.then(response => response.text())
@@ -974,11 +978,30 @@
 							details.papers.forEach(paper => {
 								const listItem = document.createElement('li');
 								const updatedInfo = dictionaryB[paper['Paper ID']]
+								let extra = '';  // Declare a variable to hold the extra text
+								let bestPaperInd = '';  // Declare a variable to hold the extra text
+								let paperType = ''
+
 								if (paper.Title.charAt(0) === '*') {
-									listItem.innerHTML = `<i class="fa fa-comment-o" aria-hidden="true"></i> [${updatedInfo.type}] ${updatedInfo.title} - Authors: ${paper.Authors}`;
-								} else {
-									listItem.innerHTML = `[${updatedInfo.type}] ${updatedInfo.title} - Authors: ${paper.Authors}`;
+									extra = '<i class="fa fa-comment-o" aria-hidden="true"></i> '
 								}
+								if (bestpaper_nom_ids.includes(paper['Paper ID'])){
+									bestPaperInd = '<i class="fa fa-star" aria-hidden="true"></i> '
+									// bestPaperInd = '<i class="fa fa-star-o" aria-hidden="true"></i> '
+								}
+								if (updatedInfo.type === 'fp'){
+									paperType = '<span style="color: blue;">[fp]</span>'
+								} else if (updatedInfo.type === 'pp') {
+									paperType = '<span style="color: green;">[pp]</span>'
+								} else if (updatedInfo.type === 'rr') {
+									paperType = '<span style="color: orange;">[rr]</span>'
+								} else if (updatedInfo.type === '**rr') {
+									paperType = '<span style="color: purple;">[**rr]</span>'
+								} else if (updatedInfo.type === 'tois') {
+									paperType = '<span style="color: red;">[tois]</span>'
+								}
+								listItem.innerHTML = `${bestPaperInd}${extra}${paperType} ${updatedInfo.title} - Authors: ${paper.Authors}`;
+
 								list.appendChild(listItem);
 							});
 							sessionDiv.appendChild(list);

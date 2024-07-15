@@ -926,6 +926,53 @@
 					'W1.6': 'Guglielmo Faggioli',
 					'W1.7': 'Ellen Voorhees',
 			};
+			var sessionLocations = {
+					"M1.1": 'Congressional Ballroom',
+					'M1.2': 'Senate',
+					'M1.3': 'Federal A',
+					'M1.4': 'Federal B',
+					'M1.5': 'South American A',
+					'M1.6': 'South American B',
+					'M1.7': 'New York',
+
+					'M2.1': 'Congressional Ballroom',
+					'M2.2': 'Senate',
+					'M2.3': 'Federal A',
+					'M2.4': 'Federal B',
+					'M2.5': 'South American A',
+					'M2.6': 'South American B',
+
+					'M3.1': 'Senate',
+					'M3.2': 'Federal A',
+					'M3.3': 'Federal B',
+					'M3.4': 'South American A',
+					'M3.5': 'South American B',
+					'M3.6': 'New York',
+
+					'T1.1': 'Senate',
+					'T1.2': 'Federal A',
+					'T1.3': 'South American B',
+					'T1.4': 'Statler A & B',
+
+					'T2.1': 'Senate',
+					'T2.2': 'Federal A',
+					'T2.3': 'South American B',
+					'T2.4': 'Statler A & B',
+					'T2.5': 'Federal B',
+
+					'T3.1': 'Senate',
+					'T3.2': 'Federal A',
+					'T3.3': 'South American B',
+					'T3.4': 'Statler A & B',
+
+					'W1.1': 'Federal A & B',
+					'W1.2': 'South American A',
+					'W1.3': 'South American B',
+					'W1.4': 'Massachusetts',
+					'W1.5': 'New York',
+					'W1.6': 'Ohio',
+					'W1.7': 'California',
+			};
 			const bestpaper_nom_ids =
 				["3856", "3563", "4411", "5367", "1628", "5855", "410", "2522", "5654", "4465", "1061", "8068", "7462", "3345", "9816", "8879", "4266", "7366", "6427", "6907",
 				"2755", "6730", "1484", "7467", "8273", "9924", "3746", "1037", "3368", "5137", "9126", "8000", "9082"]; //full and short best paper nominations
@@ -966,7 +1013,8 @@
 						for (const [sessionKey, details] of Object.entries(sessions)) {
 							const sessionDiv = document.createElement('div');
 							const sessionHeading = document.createElement('h2');
-							sessionHeading.textContent = sessionKey;
+							sessionHeading.innerHTML = `${sessionKey} <span style="color: red;">(${sessionLocations[details.sessionID]})</span>`;
+							//textContent
 							sessionHeading.id = details.sessionID;  // Setting the ID from sessionID
 							sessionDiv.appendChild(sessionHeading);
 
